@@ -1,6 +1,55 @@
-## 🚀 Projeto em Destaque
+# 🏦 Sistema Bancário Simplificado
 
-### 🏦 Sistema Bancário Simplificado
-Implementação de lógica financeira e regras de negócio em Python.
+Implementação de um sistema bancário em Python com foco na aplicação de regras de negócio financeiras e estruturação lógica de operações.
 
-📂 projetos/sistema-bancario
+Este projeto integra o Laboratório de Desenvolvimento Técnico, com ênfase na construção de fundamentos sólidos para sistemas financeiros empresariais.
+
+---
+
+## 🎯 Objetivo
+
+Simular operações essenciais de um sistema bancário, aplicando:
+
+- Estruturação de lógica financeira
+- Controle de regras de negócio
+- Organização modular de código
+- Tratamento de validações
+- Registro estruturado de movimentações
+
+---
+
+## ⚙️ Funcionalidades
+
+- ✅ Depósito de valores
+- ✅ Saque com limite por operação (R$ 500,00)
+- ✅ Limite de 3 saques diários
+- ✅ Controle de saldo
+- ✅ Registro de movimentações
+- ✅ Emissão de extrato formatado
+- ✅ Reset automático do limite diário de saques
+
+---
+
+## 🧠 Regras de Negócio Implementadas
+
+- Não permite depósito com valor inválido ou negativo
+- Não permite saque superior ao saldo disponível
+- Bloqueia saques acima do limite por operação
+- Respeita limite máximo de saques por dia
+- Mantém histórico completo das movimentações
+
+---
+
+## 🏗 Estrutura Técnica
+
+O sistema foi desenvolvido utilizando:
+
+- Python 3
+- Programação estruturada
+- Funções separadas por responsabilidade
+- Constantes para controle de regras
+- Organização orientada à clareza e manutenção
+
+---
+
+## 📂 Estrutura do Projeto
