@@ -53,3 +53,34 @@ O sistema foi desenvolvido utilizando:
 ---
 
 ## 📂 Estrutura do Projeto
+
+sistema-bancario/
+│
+├── sistema_bancario.py
+└── README.md
+
+
+---
+
+## 🚀 Evolução Prevista
+
+Versões futuras poderão incluir:
+
+- Estrutura orientada a objetos
+- Cadastro de múltiplos usuários
+- Separação por conta e agência
+- Persistência em banco de dados
+- Interface web
+- Integração com API
+
+---
+
+## 📌 Contexto Estratégico
+
+Este projeto representa a aplicação prática de fundamentos financeiros e regras de negócio em ambiente computacional.
+
+A tecnologia é utilizada como instrumento para estruturar processos e apoiar decisões baseadas em lógica e dados.
+
+---
+
+
