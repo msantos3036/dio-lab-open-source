@@ -1,74 +1,180 @@
-# Sistema Bancário - Versão 1
+"""
+Sistema Bancário Simplificado (v1)
+Operações: depósito, saque e extrato.
 
-saldo = 0
-limite = 500
-extrato = ""
-numero_saques = 0
-LIMITE_SAQUES = 3
+Regras:
+- Depósitos e saques são registrados e exibidos no extrato.
+- Máximo de 3 saques diários.
+- Limite de R$ 500,00 por saque.
+- Não permite saque sem saldo.
 
-while True:
+Observação:
+- Como é a v1 (apenas 1 usuário), não há agência/conta.
+"""
 
-    menu = """
+from datetime import date
 
-    ========== MENU ==========
-    [d] Depositar
-    [s] Sacar
-    [e] Extrato
-    [q] Sair
-    ==========================
-    
-    => """
 
-    opcao = input(menu)
+# ------------------------------
+# Regras de negócio / constantes
+# ------------------------------
+LIMITE_SAQUE = 500.00
+LIMITE_SAQUES_DIARIOS = 3
 
-    # DEPÓSITO
-    if opcao == "d":
-        valor = float(input("Informe o valor do depósito: R$ "))
 
-        if valor > 0:
-            saldo += valor
-            extrato += f"Depósito: R$ {valor:.2f}\n"
-            print("✅ Depósito realizado com sucesso!")
-        else:
-            print("❌ Operação falhou! O valor informado é inválido.")
+# ------------------------------
+# Funções auxiliares
+# ------------------------------
+def formatar_moeda(valor: float) -> str:
+    return f"R$ {valor:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
-    # SAQUE
-    elif opcao == "s":
-        valor = float(input("Informe o valor do saque: R$ "))
 
-        excedeu_saldo = valor > saldo
-        excedeu_limite = valor > limite
-        excedeu_saques = numero_saques >= LIMITE_SAQUES
+def ler_valor_float(mensagem: str) -> float | None:
+    """
+    Lê um valor numérico do usuário.
+    Retorna None se a entrada for inválida.
+    Aceita vírgula ou ponto como separador decimal.
+    """
+    entrada = input(mensagem).strip().replace(".", "").replace(",", ".")
+    try:
+        valor = float(entrada)
+        return valor
+    except ValueError:
+        return None
 
-        if valor <= 0:
-            print("❌ Operação falhou! O valor informado é inválido.")
 
-        elif excedeu_saldo:
-            print("❌ Operação falhou! Você não tem saldo suficiente.")
+def limpar_tela():
+    # Simples (evita dependência de SO). Se quiser, pode substituir por os.system.
+    print("\n" * 2)
 
-        elif excedeu_limite:
-            print("❌ Operação falhou! O limite máximo por saque é R$ 500.00.")
 
-        elif excedeu_saques:
-            print("❌ Operação falhou! Número máximo de 3 saques diários atingido.")
+def obter_data_hoje() -> date:
+    return date.today()
 
-        else:
-            saldo -= valor
-            extrato += f"Saque:    R$ {valor:.2f}\n"
-            numero_saques += 1
-            print("✅ Saque realizado com sucesso!")
 
-    # EXTRATO
-    elif opcao == "e":
-        print("\n========== EXTRATO ==========")
-        print("Não foram realizadas movimentações." if not extrato else extrato)
-        print(f"\nSaldo: R$ {saldo:.2f}")
-        print("==============================")
+# ------------------------------
+# Operações
+# ------------------------------
+def depositar(saldo: float, extrato: list[dict]) -> float:
+    valor = ler_valor_float("Informe o valor do depósito: ")
+    if valor is None:
+        print("❌ Valor inválido. Tente novamente.")
+        return saldo
 
-    # SAIR
-    elif opcao == "q":
-        print("👋 Obrigado por usar nosso sistema bancário!")
-        break
+    if valor <= 0:
+        print("❌ O valor do depósito deve ser maior que zero.")
+        return saldo
 
+    saldo += valor
+    extrato.append({"tipo": "DEPÓSITO", "valor": valor, "data": obter_data_hoje()})
+    print(f"✅ Depósito realizado: {formatar_moeda(valor)}")
+    return saldo
+
+
+def sacar(
+    saldo: float,
+    extrato: list[dict],
+    saques_hoje: int,
+) -> tuple[float, int]:
+    if saques_hoje >= LIMITE_SAQUES_DIARIOS:
+        print("❌ Limite diário de saques atingido.")
+        return saldo, saques_hoje
+
+    valor = ler_valor_float("Informe o valor do saque: ")
+    if valor is None:
+        print("❌ Valor inválido. Tente novamente.")
+        return saldo, saques_hoje
+
+    if valor <= 0:
+        print("❌ O valor do saque deve ser maior que zero.")
+        return saldo, saques_hoje
+
+    if valor > LIMITE_SAQUE:
+        print(f"❌ Limite por saque: {formatar_moeda(LIMITE_SAQUE)}")
+        return saldo, saques_hoje
+
+    if valor > saldo:
+        print("❌ Saldo insuficiente. Não foi possível realizar o saque.")
+        return saldo, saques_hoje
+
+    saldo -= valor
+    extrato.append({"tipo": "SAQUE", "valor": -valor, "data": obter_data_hoje()})
+    saques_hoje += 1
+    print(f"✅ Saque realizado: {formatar_moeda(valor)}")
+    return saldo, saques_hoje
+
+
+def imprimir_extrato(saldo: float, extrato: list[dict]) -> None:
+    print("\n" + "=" * 32)
+    print("EXTRATO".center(32))
+    print("=" * 32)
+
+    if not extrato:
+        print("Nenhuma movimentação registrada.")
     else:
-        print("❌ Operação inválida! Selecione novamente a operação desejada.")
+        for mov in extrato:
+            data_str = mov["data"].strftime("%d/%m/%Y")
+            tipo = mov["tipo"]
+            valor = mov["valor"]
+
+            if tipo == "DEPÓSITO":
+                print(f"{data_str} | {tipo:<8} | +{formatar_moeda(valor)}")
+            else:
+                print(f"{data_str} | {tipo:<8} |  {formatar_moeda(valor)}")
+
+    print("-" * 32)
+    print(f"SALDO ATUAL: {formatar_moeda(saldo)}")
+    print("=" * 32 + "\n")
+
+
+# ------------------------------
+# Menu / Controle diário
+# ------------------------------
+def mostrar_menu() -> str:
+    return input(
+        """
+[d] Depositar
+[s] Sacar
+[e] Extrato
+[q] Sair
+
+=> """
+    ).strip().lower()
+
+
+def main():
+    saldo = 0.0
+    extrato: list[dict] = []
+
+    data_atual = obter_data_hoje()
+    saques_hoje = 0
+
+    while True:
+        # Reseta contador diário se virar o dia
+        hoje = obter_data_hoje()
+        if hoje != data_atual:
+            data_atual = hoje
+            saques_hoje = 0
+
+        opcao = mostrar_menu()
+        limpar_tela()
+
+        if opcao == "d":
+            saldo = depositar(saldo, extrato)
+
+        elif opcao == "s":
+            saldo, saques_hoje = sacar(saldo, extrato, saques_hoje)
+
+        elif opcao == "e":
+            imprimir_extrato(saldo, extrato)
+
+        elif opcao == "q":
+            print("✅ Encerrando o sistema. Até mais!")
+            break
+
+        else:
+            print("❌ Opção inválida. Selecione uma opção do menu.")
+
+
+if __name__ == "__main__":
+    main()
