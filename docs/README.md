@@ -1,6 +1,6 @@
 # 🧠 Laboratório de Desenvolvimento Técnico
 
-Estudos aplicados em tecnologia com foco em sistemas financeiros, arquitetura de banco de dados e desenvolvimento de soluções orientadas a negócios.
+Laboratório técnico utilizado como base de apoio ao desenvolvimento de soluções estratégicas em gestão e sistemas empresariais.
 
 ---
 
@@ -40,3 +40,4 @@ Este repositório documenta minha evolução técnica estruturada, com foco em:
 Este laboratório serve como base técnica para a construção de sistemas inteligentes de gestão empresarial.
 
 Todas as implementações buscam conectar Finanças, Dados e Tecnologia.
+
