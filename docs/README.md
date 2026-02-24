@@ -1,55 +1,42 @@
-# <img width="1536" height="1024" alt="Banner" src="https://github.com/user-attachments/assets/60f1f59e-5a89-4ddf-a554-e28068aa802e" />
-# 💫 About Me:
-# Marcelo Santos
+# 🧠 Laboratório de Desenvolvimento Técnico
 
-Financial Controller & Business Systems Builder
-
-Profissional com mais de 30 anos de experiência em Controladoria, Finanças e Rentabilidade Empresarial, atualmente integrando Tecnologia, Dados e Inteligência Artificial à gestão estratégica.
-
-Minha missão é transformar diagnósticos financeiros em sistemas inteligentes, escaláveis e orientados à performance.
-
-## What I Build
-
-- 📊 Sistemas de diagnóstico financeiro empresarial
-- 💰 Modelos de rentabilidade e análise de margem
-- 🏫 Estruturação financeira para grupos educacionais
-- 🍽️ Diagnóstico estratégico para restaurantes
-- 🚗 Modelos financeiros para locadoras e negócios automotivos
-- 🗄️ Estruturação de bancos de dados relacionais (MySQL)
-- 🧠 Aplicações de IA e análise de dados para tomada de decisão
-- 
-# 💻 Tech Stack:
-## Tech Stack
-
-- Python
-- MySQL
-- JavaScript
-- Power BI
-- Excel Avançado
-- Modelagem Financeira
-- Estruturação de Banco de Dados
-- Análise de Dados
-
-## Current Focus
-
-- Desenvolvimento de sistemas financeiros web
-- Integração entre diagnóstico financeiro e tecnologia
-- Estruturação de bases de dados escaláveis
-- Aplicação de IA na gestão empresarial
-
-- ## Vision
-
-Construir sistemas que conectam Finanças, Dados e Tecnologia para gerar decisões mais inteligentes, previsíveis e lucrativas.
-
-Bridging Finance, Data and Technology.
-
-
-# 📊 GitHub Stats:
-![](https://github-readme-stats.vercel.app/api?username=Marcelo-Santos&theme=dark&hide_border=false&include_all_commits=false&count_private=false)<br/>
-![](https://nirzak-streak-stats.vercel.app/?user=Marcelo-Santos&theme=dark&hide_border=false)<br/>
-![](https://github-readme-stats.vercel.app/api/top-langs/?username=Marcelo-Santos&theme=dark&hide_border=false&include_all_commits=false&count_private=false&layout=compact)
+Estudos aplicados em tecnologia com foco em sistemas financeiros, arquitetura de banco de dados e desenvolvimento de soluções orientadas a negócios.
 
 ---
-[![](https://visitcount.itsvg.in/api?id=Marcelo-Santos&icon=0&color=0)](https://visitcount.itsvg.in)
 
-<!-- Proudly created with GPRM ( https://gprm.itsvg.
+## 🎯 Propósito
+
+Este repositório documenta minha evolução técnica estruturada, com foco em:
+
+- Aplicação de Python em lógica financeira  
+- Modelagem de banco de dados relacional (MySQL)  
+- Implementação de regras de negócio  
+- Estruturação e automação de sistemas  
+- Fundamentos de Inteligência Artificial aplicada a negócios  
+
+---
+
+## 🏗️ Áreas de Desenvolvimento
+
+### 📊 Implementação de Lógica Financeira
+- Simulações de sistemas bancários  
+- Cálculos financeiros (SAC, Price, análise de margem)  
+- Modelagem de rentabilidade  
+
+### 🗄️ Arquitetura de Banco de Dados
+- Modelagem relacional  
+- Estruturação SQL  
+- Normalização de dados  
+
+### 💻 Desenvolvimento de Sistemas
+- Programação de regras de negócio  
+- Estruturação modular  
+- Organização e clareza de código  
+
+---
+
+## 🚀 Estratégia de Evolução
+
+Este laboratório serve como base técnica para a construção de sistemas inteligentes de gestão empresarial.
+
+Todas as implementações buscam conectar Finanças, Dados e Tecnologia.
