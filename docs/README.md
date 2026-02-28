@@ -1,43 +1,48 @@
-# 🧠 Laboratório de Desenvolvimento Técnico
+# 🧪 Laboratório Técnico
 
-Laboratório técnico utilizado como base de apoio ao desenvolvimento de soluções estratégicas em gestão e sistemas empresariais.
-
----
-
-## 🎯 Propósito
-
-Este repositório documenta minha evolução técnica estruturada, com foco em:
-
-- Aplicação de Python em lógica financeira  
-- Modelagem de banco de dados relacional (MySQL)  
-- Implementação de regras de negócio  
-- Estruturação e automação de sistemas  
-- Fundamentos de Inteligência Artificial aplicada a negócios  
+Repositório dedicado aos estudos práticos em desenvolvimento de software, automação e tecnologia aplicada a negócios.
 
 ---
 
-## 🏗️ Áreas de Desenvolvimento
+## 🎯 Objetivo
 
-### 📊 Implementação de Lógica Financeira
-- Simulações de sistemas bancários  
-- Cálculos financeiros (SAC, Price, análise de margem)  
-- Modelagem de rentabilidade  
+Registrar a evolução técnica através de experimentos, desafios e pequenos projetos voltados para:
 
-### 🗄️ Arquitetura de Banco de Dados
-- Modelagem relacional  
-- Estruturação SQL  
-- Normalização de dados  
-
-### 💻 Desenvolvimento de Sistemas
-- Programação de regras de negócio  
-- Estruturação modular  
-- Organização e clareza de código  
+- Desenvolvimento backend
+- Automação de processos
+- Modelagem de regras de negócio
+- Tecnologia aplicada à gestão financeira
 
 ---
 
-## 🚀 Estratégia de Evolução
+## 🚀 Tecnologias em estudo
 
-Este laboratório serve como base técnica para a construção de sistemas inteligentes de gestão empresarial.
+- Python
+- Golang (Go)
+- SQL / Modelagem de Dados
+- Git & GitHub
 
-Todas as implementações buscam conectar Finanças, Dados e Tecnologia.
+---
+
+## 📚 Conteúdo do laboratório
+
+Este repositório pode conter:
+
+- Exercícios práticos
+- Protótipos
+- Testes de conceitos
+- Estudos de novas tecnologias
+
+---
+
+## 🧠 Filosofia
+
+Aprender construindo soluções reais, conectando **negócios, dados e tecnologia**.
+
+---
+
+## 👨‍💻 Autor
+
+**Marcelo Santos**  
+Consultor Estratégico em Gestão & Sistemas
 
