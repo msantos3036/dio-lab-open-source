@@ -24,7 +24,7 @@ Excel → Script Go → MySQL → Dashboard Power BI
 
 O conteúdo completo do artigo está disponível na DIO:
 
-👉 [Leia o artigo na DIO](COLE_AQUI_O_LINK)
+👉 [Leia o artigo na DIO][((https://dio.me/articles/da-planilha-ao-dashboard-automatizando-dados-financeiros-com-mysql-power-bi-go-dccdb636fa75?utm_source=link&utm_campaign=mgm-da-planilha-ao-dashboard-automatizando-dados-financeiros-com-mysql-power-bi-go-dccdb636fa75&utm_medium=article)]
 
 ## 📂 Estrutura do projeto
 
