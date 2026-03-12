@@ -20,4 +20,25 @@ Implementar uma brincadeira:
 - Caso contrário → número normal
 
 ## Exemplo de saída
+1
+2
+Pin
+4
+Pan
+Pin
+7
+8
+Pin
+Pan
 
+## Como executar
+go run main.go
+
+## Tecnologia
+Go (Golang)
+
+## Autor
+Marcelo Santos
+
+```bash
+go run main.go
