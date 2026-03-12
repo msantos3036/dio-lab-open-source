@@ -34,3 +34,13 @@ func main() {
 	parte2()
 
 }
+
+
+---
+
+Dentro da pasta do projeto:
+
+```bash
+git add .
+git commit -m "Desafio Go - Pin Pan"
+git push
