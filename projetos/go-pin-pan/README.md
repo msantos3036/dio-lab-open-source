@@ -31,14 +31,12 @@ Pin
 Pin
 Pan
 
-## Como executar
-go run main.go
-
 ## Tecnologia
 Go (Golang)
 
 ## Autor
 Marcelo Santos
 
+## Como executar
 ```bash
 go run main.go
