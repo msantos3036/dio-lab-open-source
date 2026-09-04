@@ -1,0 +1,186 @@
+# Desafio Criativo — Simplificando Tarefas e Ganhando Foco com IA
+
+## Bootcamp Heineken — Inteligência Artificial aplicada a Vendas
+
+### Projeto: Assistente de Inteligência Comercial com IA
+
+Este projeto foi desenvolvido como parte do desafio de criação de prompts do Bootcamp Heineken, aplicando os conceitos de **intenção clara, contexto e instruções específicas** a um problema empresarial real.
+
+A proposta é utilizar Inteligência Artificial para apoiar gestores e profissionais de vendas na análise de dados comerciais, transformando dados históricos em informações que auxiliem na priorização de clientes e na tomada de decisão.
+
+---
+
+## 1. Intenção
+
+Quero que a IA gere uma **análise de inteligência comercial** para gestores e profissionais de vendas, com o objetivo de identificar:
+
+- clientes que necessitam de atenção;
+- oportunidades de vendas;
+- mudanças relevantes no comportamento de compra;
+- possíveis oportunidades de recompra;
+- situações comerciais que mereçam atuação prioritária.
+
+O resultado esperado é transformar dados históricos de vendas em informações objetivas que auxiliem gestores e vendedores na definição de prioridades comerciais.
+
+---
+
+## 2. Contexto e Restrições
+
+A empresa possui dados históricos de vendas que podem conter informações como:
+
+- cliente;
+- pedido;
+- data da venda;
+- produto;
+- quantidade;
+- faturamento;
+- vendedor;
+- região;
+- ticket médio;
+- frequência de compra;
+- demais indicadores comerciais disponíveis.
+
+A análise deve ser:
+
+- executiva;
+- objetiva;
+- baseada nos dados fornecidos;
+- orientada à tomada de decisão;
+- organizada por nível de prioridade.
+
+Para cada situação relevante, a IA deve apresentar a evidência encontrada nos dados e, quando houver fundamento, sugerir uma ação comercial.
+
+### Restrições
+
+A IA deve evitar:
+
+- inventar informações ausentes na base;
+- criar clientes, valores ou acontecimentos inexistentes;
+- atribuir causas que não possam ser comprovadas pelos dados;
+- confundir correlação com causalidade;
+- apresentar conclusões sem evidências;
+- produzir recomendações genéricas sem relação com os dados analisados.
+
+Quando houver uma inferência, ela deve ser identificada como **hipótese**.
+
+Quando os dados disponíveis forem insuficientes para uma conclusão, essa limitação deve ser informada explicitamente.
+
+---
+
+## 3. Prompt Final
+
+> Você é um assistente de inteligência comercial especializado em análise de vendas.
+>
+> Analise os dados históricos de vendas fornecidos e produza uma análise de inteligência comercial destinada a gestores e profissionais da área comercial, com o objetivo de identificar clientes que necessitam de atenção, oportunidades de vendas, mudanças relevantes no comportamento de compra e ações comerciais prioritárias.
+>
+> Considere os dados disponíveis, como cliente, pedido, data da venda, produto, quantidade, faturamento, vendedor, região e demais indicadores comerciais existentes na base.
+>
+> Analise especialmente recência e frequência de compra, evolução do faturamento, ticket médio, quantidade de pedidos e alterações relevantes no comportamento dos clientes.
+>
+> Identifique, quando os dados permitirem:
+>
+> - clientes relevantes que reduziram ou interromperam compras;
+> - clientes que aumentaram suas compras;
+> - oportunidades de recompra;
+> - alterações relevantes de frequência ou ticket médio;
+> - produtos, regiões ou vendedores com mudanças relevantes de desempenho;
+> - situações que mereçam atuação comercial.
+>
+> Para cada achado, apresente:
+>
+> 1. **Situação identificada**
+> 2. **Evidência encontrada nos dados**
+> 3. **Nível de prioridade:** Alta, Média ou Baixa
+> 4. **Ação comercial sugerida**
+>
+> Ao final, apresente as **cinco ações comerciais mais importantes**, ordenadas por prioridade.
+>
+> Utilize linguagem executiva, clara, objetiva e orientada à tomada de decisão.
+>
+> Não invente dados, clientes, causas ou justificativas que não estejam presentes na base. Não atribua causalidade quando os dados demonstrarem apenas associação. Quando fizer uma inferência, identifique-a explicitamente como hipótese. Quando não houver informação suficiente para uma conclusão, declare essa limitação.
+
+---
+
+## 4. Resultado Esperado
+
+O resultado esperado é uma análise semelhante a:
+
+### Prioridade Alta — Cliente com redução relevante de compras
+
+**Situação identificada:** cliente historicamente relevante apresenta redução significativa de compras no período recente.
+
+**Evidência:** queda de faturamento e aumento do intervalo desde a última compra em comparação ao comportamento histórico.
+
+**Prioridade:** Alta.
+
+**Ação sugerida:** realizar contato comercial para identificar o motivo da redução e avaliar possibilidade de recompra.
+
+> A causa da redução não deve ser presumida pela IA. Caso não existam dados que expliquem o comportamento, qualquer possível explicação deverá ser apresentada apenas como hipótese.
+
+---
+
+## 5. Aplicação Prática Futura
+
+Este desafio também funciona como protótipo conceitual de um **Assistente de Inteligência Comercial com IA**.
+
+A evolução prevista pode seguir as seguintes etapas:
+
+### V0.1 — Engenharia de Prompt
+
+Construção e validação do prompt de análise comercial.
+
+### V1 — Dados estruturados
+
+Aplicação do prompt sobre bases em Excel ou CSV para avaliar a qualidade dos insights produzidos.
+
+### V2 — Integração com Dashboard
+
+Inclusão de uma função de análise por IA em um dashboard comercial.
+
+### V3 — Integração com Banco de Dados
+
+Consulta automatizada de informações comerciais armazenadas em banco de dados.
+
+### V4 — Inteligência Comercial Automatizada
+
+Identificação automática de situações relevantes sem necessidade de o gestor formular previamente uma pergunta.
+
+### V5 — Analytics Preditivo
+
+Utilização de modelos estatísticos e de Machine Learning para estimar eventos como:
+
+- risco de inatividade de clientes;
+- probabilidade de recompra;
+- tendência de faturamento;
+- comportamento de demanda;
+- probabilidade de atingimento de metas.
+
+---
+
+## 6. Conceito de Evolução
+
+A proposta é evoluir gradualmente de análises descritivas para análises orientadas à ação:
+
+**Dados → Indicadores → Insights → Recomendações → Predições**
+
+O objetivo não é substituir a decisão humana, mas fornecer informações mais estruturadas para apoiar gestores e equipes comerciais.
+
+---
+
+## Tecnologias e Conceitos
+
+- Inteligência Artificial Generativa
+- Engenharia de Prompt
+- Inteligência Comercial
+- Análise de Dados
+- Business Intelligence
+- Analytics
+- Machine Learning (evolução futura)
+
+---
+
+## Autor
+
+**Marcelo Santos**
+
+Projeto desenvolvido durante o **Bootcamp Heineken — Inteligência Artificial aplicada a Vendas**, como exercício de aplicação prática de engenharia de prompts em um problema de negócio.
