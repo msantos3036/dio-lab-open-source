@@ -80,6 +80,56 @@ Dados → RFM/RFMT → Alertas → Priorização → Copiloto → Atendimento �
 
 Possíveis evoluções: integração com CRM/ERP, recuperação automática do histórico, catálogo integrado, registro de objeções, follow-ups, métricas de conversão e, futuramente, modelos preditivos com histórico suficiente.
 
+## Validação Prática do Copiloto
+
+Após a definição do prompt, da base de conhecimento e dos cenários de atendimento, foi realizado um teste prático do Copiloto em um novo chat, sem contexto prévio.
+
+O cenário utilizado foi o da **Alfa Distribuidora**, com os seguintes dados:
+
+- Recência: 52 dias;
+- Ciclo médio de recompra: 28 dias;
+- Frequência nos últimos 12 meses: 11 pedidos;
+- Faturamento nos últimos 12 meses: R$ 186.000;
+- Ticket médio histórico: R$ 16.900;
+- Ticket médio recente: R$ 9.800;
+- Alerta: cliente fora do ciclo histórico de recompra.
+
+### Resultado observado
+
+O Copiloto:
+
+- identificou corretamente que o cliente estava fora de seu ciclo histórico de recompra;
+- identificou que o ticket recente estava abaixo do ticket histórico;
+- reconheceu que os dados demonstravam uma mudança de comportamento;
+- não atribuiu essa mudança a preço, concorrência, estoque, insatisfação ou outra causa sem evidência;
+- não inventou preços, descontos, disponibilidade de estoque ou prazos;
+- utilizou a base de conhecimento para sugerir perguntas e possíveis respostas a objeções;
+- recomendou uma abordagem consultiva antes de sugerir produtos;
+- orientou o vendedor a registrar o resultado do contato e definir o próximo passo.
+
+Um dos pontos mais relevantes da resposta foi:
+
+> “Os dados mostram mudança no comportamento de compra, mas não permitem determinar a causa.”
+
+O resultado demonstra que as restrições definidas no prompt contribuíram para manter a resposta baseada nas evidências disponíveis.
+
+### Avaliação
+
+O teste foi considerado satisfatório porque o Copiloto conseguiu transformar indicadores comerciais em apoio ao atendimento sem criar informações ausentes.
+
+A validação também reforçou a separação entre duas funções:
+
+```text
+Motor analítico
+      ↓
+Indicadores e alertas
+      ↓
+Copiloto de IA
+      ↓
+Interpretação e apoio ao atendimento
+      ↓
+Decisão do vendedor
+
 ## Conclusão
 O projeto demonstra como uma base de conhecimento pequena e organizada pode tornar a IA mais contextualizada no atendimento comercial. A inteligência analítica identifica o que merece atenção; o copiloto ajuda o vendedor a transformar esse contexto em uma conversa comercial melhor preparada.
 
